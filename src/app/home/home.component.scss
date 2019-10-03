@@ -1,0 +1,16 @@
+@import 'helpers';
+@import 'variables';
+
+.container{
+  @extend %center-column;
+  height: 100vh;
+  .btnLogout{
+    background: $button-secondary;
+    color: $white;
+    margin-top: 15px;
+
+    &:hover{
+      background: lighten($button-secondary, 10%);
+    }
+  }
+}

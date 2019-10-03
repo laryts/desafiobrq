@@ -1,0 +1,43 @@
+@import 'helpers';
+@import 'variables';
+@import 'auth';
+
+form{
+  @extend %center-column;
+
+	height: 100vh;
+
+	.formGroup{
+		@extend %formWrapper;
+
+		h2{
+			text-align: center;
+			margin-bottom: 15%;
+		}
+
+		.inputGroup{
+			text-align: center;
+			margin: 15px 0;
+			input{
+				width: 100%;
+				text-align: center;
+			}
+		}
+
+		button{
+      @extend %btn;
+
+			width: 100%;
+			background-color: $button-primary;
+			color: $white;
+			&:hover{
+        background-color: lighten($button-primary,10%);
+			}
+		}
+
+    .wrapRegister{
+      text-align: center;
+      margin-top: 10px;
+    }
+	}
+}

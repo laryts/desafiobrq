@@ -1,0 +1,23 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div class="formGroup">
+    <h2>REGISTER</h2>
+    <div class="inputGroup">
+      <label for="text">Nome</label>
+      <input type="text" [ngModel]="name">
+    </div>
+    <div class="inputGroup">
+      <label for="email">E-mail</label>
+      <input type="email" formControlName="username">
+    </div>
+    <div class="inputGroup">
+      <label for="password">Password</label>
+      <input type="password" formControlName="password">
+    </div>
+    <div class="inputGroup">
+      <label for="password">Confirm Password</label>
+      <input type="password" formControlName="confirmPassword">
+    </div>
+    <button>Register</button>
+    <div class="wrapRegister"><span>Ainda não tem cadastro? <a  routerLink="/login"><b>Clique aqui!</b></a></span></div>
+  </div>
+</form>

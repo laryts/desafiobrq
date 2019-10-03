@@ -1,0 +1,64 @@
+@import 'variables';
+@import 'helpers';
+@import 'auth';
+
+form{
+  @extend %center-column;
+
+	height: 100vh;
+
+	.formGroup{
+		@extend %formWrapper;
+
+		h2{
+			text-align: center;
+			margin-bottom: 15px;
+		}
+
+		.inputGroup{
+			text-align: center;
+      margin: 20px 0;
+      position: relative;
+
+			input{
+				width: 100%;
+				text-align: center;
+      }
+      span{
+        font-size: 10px;
+        position: absolute;
+        color: red;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+		}
+
+		button{
+			width: 100%;
+			background-color: $button-primary;
+			color: $white;
+			&:hover{
+        background-color: lighten($button-primary,10%);
+			}
+    }
+
+    .wrapRegister{
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+
+  .error{
+    border: 1px solid red;
+  }
+  .sucess{
+    border: 1px solid green;
+  }
+  .error-message{
+    color: red;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}

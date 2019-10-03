@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/scss/reset';
+@import './assets/scss/variables';
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased !important;
+  height: 100vh;
+  background-color: #f8f8f8;
+  background-repeat: no-repeat;
+}
+
+input{
+    border: 1px solid #ccc;
+    border-radius: $radius-input;
+    padding: 5px;
+    color: #777;
+}
+
+button {
+    border: none;
+    padding: 10px;
+    border-radius: $radius-button;
+    cursor: pointer;
+    background: #c8c8c8;
+    &:hover{
+        background: #e7e7e7;
+    }
+}

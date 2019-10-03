@@ -1,0 +1,19 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <div class="formGroup">
+    <h2>LOGIN</h2>
+
+    <div class="inputGroup">
+      <label for="text">Username</label>
+      <input [className]="(loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched) || error) ? 'error' : ''" type="text" formControlName="username">
+      <span *ngIf="loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)">Username is required</span>
+    </div>
+    <div class="inputGroup">
+      <label for="password">Password</label>
+      <input [className]="(loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched) || error)? 'error' : ''" type="password" formControlName="password">
+      <span *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)">Password is required</span>
+    </div>
+    <span class="error-message">{{error}}</span>
+    <button [attr.disabled]="loading ? '' : null">Login</button>
+    <div class="wrapRegister"><span>Ainda não tem cadastro? <a  routerLink="/register"><b>Clique aqui!</b></a></span></div>
+  </div>
+</form>
