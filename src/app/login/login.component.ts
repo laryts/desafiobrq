@@ -47,4 +47,8 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  valida(campo: string) {
+    return this.loginForm.controls[campo].invalid && (this.loginForm.controls[campo].dirty || this.loginForm.controls[campo].touched);
+  }
+
 }
